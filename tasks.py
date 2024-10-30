@@ -11,7 +11,6 @@ import numpy
 # The name of the function should be step
 
 # Your code here:
-# -----------------------------------------------
 
 
 def step(value: int) -> int:
@@ -20,8 +19,6 @@ def step(value: int) -> int:
     else:
         return -1
 
-# -----------------------------------------------
-
 
 # Task 2:
 # Instructions:
@@ -29,14 +26,8 @@ def step(value: int) -> int:
 # The function should return a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff).
 # The name of the function should be ReLu
 
-
-# Your code here:
-# -----------------------------------------------
-def ReLu():
-    pass
-
-
-# -----------------------------------------------
+def ReLu(array, cutoff=0):
+    return (array[array < 0]=cutoff)
 
 
 # Task 3:
