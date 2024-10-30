@@ -1,9 +1,5 @@
 import numpy
 
-# Follow the tasks below to practice basic Python concepts.
-# Write your code in between the dashed lines.
-# Don't import additional packages. Numpy suffices.
-
 # Task 1:
 # Instructions:
 # Write a function that takes one numeric argument as input.
@@ -26,8 +22,9 @@ def step(value: int) -> int:
 # The function should return a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff).
 # The name of the function should be ReLu
 
-def ReLu(array, cutoff=0):
-    return (array[array < 0]=cutoff)
+def ReLu(array, cutoff: int = 0):
+    array[array < cutoff] = cutoff
+    return array
 
 
 # Task 3:
@@ -38,10 +35,8 @@ def ReLu(array, cutoff=0):
 # Name the function neural_net_layer
 
 # Your code here:
-# -----------------------------------------------
 
-def neural_net_layer():
-    pass
-
-
-# ------------------------------------------
+def neural_net_layer(input, weights):
+    matrix = numpy.matmul(input, weights)
+    matrix = numpy.apply_along_axis(ReLu, axis=0, arr=matrix)
+    return matrix
