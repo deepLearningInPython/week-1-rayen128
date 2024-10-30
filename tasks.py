@@ -6,8 +6,6 @@ import numpy
 # If the number is larger than zero, the function should return 1, otherwise is should return -1.
 # The name of the function should be step
 
-# Your code here:
-
 
 def step(value: int) -> int:
     if value > 0:
