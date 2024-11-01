@@ -21,8 +21,11 @@ def step(value: int) -> int:
 # The name of the function should be ReLu
 
 def ReLu(array, cutoff: int = 0):
-    array[array < cutoff] = cutoff
-    return array
+
+    copy = numpy.copy(array)
+
+    copy[copy < cutoff] = cutoff
+    return copy
 
 
 # Task 3:
@@ -36,5 +39,5 @@ def ReLu(array, cutoff: int = 0):
 
 def neural_net_layer(input, weights):
     matrix = numpy.matmul(input, weights)
-    matrix = numpy.apply_along_axis(ReLu, axis=0, arr=matrix)
+    matrix = ReLu(matrix)
     return matrix
