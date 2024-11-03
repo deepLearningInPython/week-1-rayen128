@@ -29,7 +29,7 @@ def ReLu(array, cutoff: int = 0):
 
 
 # Task 3:
-# Instructions:
+# Instruction:
 # Write a function that takes in a two-dimensional numpy array of size (n, p) and a one-dimensional numpy array of size p.
 # The function should start by multiplying the two numpy arrays (matrix multiplication).
 # Next, apply the ReLu function from above to the resulting matrix and return the result.
