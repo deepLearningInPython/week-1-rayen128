@@ -1,3 +1,4 @@
+import numpy
 
 # Comment to check if checker finds pfd
 
